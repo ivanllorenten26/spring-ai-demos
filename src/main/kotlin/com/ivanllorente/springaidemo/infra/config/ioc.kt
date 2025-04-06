@@ -20,7 +20,7 @@ class ioc (
      @Bean
      fun questionAnswerer(): QuestionAnswerer {
          return QuestionAnswerer(
-                client = OpenAiChatService(chatClient())
+                chatService = OpenAiChatService(chatClient())
          )
      }
 }

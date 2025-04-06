@@ -10,7 +10,7 @@ class OpenAiChatService(
 ): AiChatService {
 
 
-    override fun response(question: String): String? {
+    override fun getResponse(question: String): String? {
 
         val response = chatClient.prompt(question)
         return response.call().chatResponse()?.results?.first()?.output?.text
