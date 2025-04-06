@@ -1,0 +1,11 @@
+### Obtener respuestas
+GET http://localhost:8080/answers
+Accept: text/html
+
+###
+
+### Enviar pregunta
+POST http://localhost:8080/answers
+Content-Type: application/x-www-form-urlencoded
+
+question=¿Cuál es la capital de Francia?
