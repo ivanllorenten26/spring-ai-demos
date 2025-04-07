@@ -8,4 +8,4 @@ Accept: text/html
 POST http://localhost:8080/answers
 Content-Type: application/x-www-form-urlencoded
 
-question=summarize this in 3 points
+question=What is AI?
