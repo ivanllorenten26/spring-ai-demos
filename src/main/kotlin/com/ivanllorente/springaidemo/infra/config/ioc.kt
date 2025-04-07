@@ -3,6 +3,8 @@ package com.ivanllorente.springaidemo.infra.config
 import com.ivanllorente.springaidemo.application.QuestionAnswerer
 import com.ivanllorente.springaidemo.infra.ai.OpenAiChatService
 import org.springframework.ai.chat.client.ChatClient
+import org.springframework.ai.chat.client.advisor.MessageChatMemoryAdvisor
+import org.springframework.ai.chat.memory.InMemoryChatMemory
 import org.springframework.context.annotation.Bean
 import org.springframework.context.annotation.Configuration
 
@@ -13,7 +15,12 @@ class ioc (
 
     @Bean
     fun chatClient(): ChatClient {
-        val chatClient = chatBuilder.build()
+        //val chatClient = chatBuilder.build()
+        val chatClient = chatBuilder.defaultAdvisors(
+            MessageChatMemoryAdvisor(
+                InMemoryChatMemory()
+            )
+        ).build()
         return chatClient
     }
 
