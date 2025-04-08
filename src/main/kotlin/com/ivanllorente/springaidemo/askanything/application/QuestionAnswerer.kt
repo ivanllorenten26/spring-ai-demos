@@ -1,6 +1,6 @@
-package com.ivanllorente.springaidemo.application
+package com.ivanllorente.springaidemo.askanything.application
 
-import com.ivanllorente.springaidemo.domain.interfaces.AiChatService
+import com.ivanllorente.springaidemo.askanything.domain.interfaces.AiChatService
 
 class QuestionAnswerer(
     private val chatService: AiChatService

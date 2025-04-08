@@ -1,6 +1,6 @@
-package com.ivanllorente.springaidemo.infra.ai
+package com.ivanllorente.springaidemo.askanything.infra.ai
 
-import com.ivanllorente.springaidemo.domain.interfaces.AiChatService
+import com.ivanllorente.springaidemo.askanything.domain.interfaces.AiChatService
 import org.springframework.ai.chat.client.ChatClient
 import org.springframework.ai.chat.prompt.Prompt
 import org.springframework.ai.openai.OpenAiChatOptions

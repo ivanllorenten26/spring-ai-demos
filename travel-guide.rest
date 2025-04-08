@@ -1,0 +1,11 @@
+### Mostrar guía de viaje
+GET http://localhost:8080/travel-guide/show
+Accept: text/plain
+
+###
+
+### Publicar guía de viaje
+POST http://localhost:8080/travel-guide/
+Content-Type: application/x-www-form-urlencoded
+
+city=Tokio&month=June&budget=1000

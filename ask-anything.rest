@@ -1,11 +1,11 @@
 ### Obtener respuestas
-GET http://localhost:8080/answers
+GET http://localhost:8080/ask-anything/answers
 Accept: text/html
 
 ###
 
 ### Enviar pregunta
-POST http://localhost:8080/answers
+POST http://localhost:8080/ask-anything/answers
 Content-Type: application/x-www-form-urlencoded
 
 question=What is AI?

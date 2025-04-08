@@ -1,7 +1,9 @@
-package com.ivanllorente.springaidemo.infra.config
+package com.ivanllorente.springaidemo.shared.infra.config
 
-import com.ivanllorente.springaidemo.application.QuestionAnswerer
-import com.ivanllorente.springaidemo.infra.ai.OpenAiChatService
+import com.ivanllorente.springaidemo.askanything.application.QuestionAnswerer
+import com.ivanllorente.springaidemo.askanything.infra.ai.OpenAiChatService
+import com.ivanllorente.springaidemo.travelguide.application.TravelGuidePlanner
+import com.ivanllorente.springaidemo.travelguide.infra.ai.OpenAiTravelGuideAiService
 import org.springframework.ai.chat.client.ChatClient
 import org.springframework.ai.chat.client.advisor.MessageChatMemoryAdvisor
 import org.springframework.ai.chat.memory.InMemoryChatMemory
@@ -27,7 +29,14 @@ class ioc (
      @Bean
      fun questionAnswerer(): QuestionAnswerer {
          return QuestionAnswerer(
-                chatService = OpenAiChatService(chatClient())
+             chatService = OpenAiChatService(chatClient())
          )
      }
+
+    @Bean
+    fun travelGuidePlanner(): TravelGuidePlanner {
+        return TravelGuidePlanner(
+           aiService = OpenAiTravelGuideAiService(chatClient())
+        )
+    }
 }
