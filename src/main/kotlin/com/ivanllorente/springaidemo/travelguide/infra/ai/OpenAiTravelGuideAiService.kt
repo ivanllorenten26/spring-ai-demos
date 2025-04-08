@@ -11,9 +11,7 @@ class OpenAiTravelGuideAiService(
     private val chatClient: ChatClient
 ): TravelGuideAiService {
 
-
     override fun getPlan(city: String, month: String, budget: String): String? {
-
 
         //val response = chatClient.prompt(question)
         val options = OpenAiChatOptions()
@@ -27,6 +25,8 @@ class OpenAiTravelGuideAiService(
             1: places to visit
             2: activities
             3: and estimated costs.
+            Avoid information about ficticial places or activities.
+            If the place, country or city, doesn't exist, say that the country doesn't exist.
         """.trimIndent()
 
         val placeholderMap = mapOf(

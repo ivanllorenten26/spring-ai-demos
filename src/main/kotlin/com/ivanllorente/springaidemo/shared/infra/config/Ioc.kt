@@ -1,7 +1,7 @@
 package com.ivanllorente.springaidemo.shared.infra.config
 
 import com.ivanllorente.springaidemo.askanything.application.QuestionAnswerer
-import com.ivanllorente.springaidemo.askanything.infra.ai.OpenAiChatService
+import com.ivanllorente.springaidemo.askanything.infra.ai.OpenAiAskAiService
 import com.ivanllorente.springaidemo.travelguide.application.TravelGuidePlanner
 import com.ivanllorente.springaidemo.travelguide.infra.ai.OpenAiTravelGuideAiService
 import org.springframework.ai.chat.client.ChatClient
@@ -29,7 +29,7 @@ class ioc (
      @Bean
      fun questionAnswerer(): QuestionAnswerer {
          return QuestionAnswerer(
-             chatService = OpenAiChatService(chatClient())
+             chatService = OpenAiAskAiService(chatClient())
          )
      }
 

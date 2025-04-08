@@ -1,5 +1,5 @@
 package com.ivanllorente.springaidemo.askanything.domain.interfaces
 
-interface AiChatService {
+interface AskAiService {
     fun getResponse(question: String): String?
 }

@@ -1,9 +1,9 @@
 package com.ivanllorente.springaidemo.askanything.application
 
-import com.ivanllorente.springaidemo.askanything.domain.interfaces.AiChatService
+import com.ivanllorente.springaidemo.askanything.domain.interfaces.AskAiService
 
 class QuestionAnswerer(
-    private val chatService: AiChatService
+    private val chatService: AskAiService
 ) {
     fun invoke(question: String): String {
         val response = chatService

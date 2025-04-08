@@ -1,15 +1,15 @@
 package com.ivanllorente.springaidemo.askanything.infra.ai
 
-import com.ivanllorente.springaidemo.askanything.domain.interfaces.AiChatService
+import com.ivanllorente.springaidemo.askanything.domain.interfaces.AskAiService
 import org.springframework.ai.chat.client.ChatClient
 import org.springframework.ai.chat.prompt.Prompt
 import org.springframework.ai.openai.OpenAiChatOptions
 import org.springframework.stereotype.Service
 
 @Service
-class OpenAiChatService(
+class OpenAiAskAiService(
     private val chatClient: ChatClient
-): AiChatService {
+): AskAiService {
 
 
     override fun getResponse(question: String): String? {
